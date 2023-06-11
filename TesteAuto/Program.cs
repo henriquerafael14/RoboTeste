@@ -1,7 +1,5 @@
 ﻿using FlaUI.Core;
-using FlaUI.Core.AutomationElements;
 using FlaUI.UIA3;
-using System;
 
 namespace TesteAuto
 {
@@ -9,12 +7,13 @@ namespace TesteAuto
     {
         static void Main(string[] args)
         {
-            var app = Application.Launch("C:\\Users\\rafa1\\Downloads\\OperaGXSetup.exe");
+            var app = Application.Launch("C:\\Users\\rafa1\\Downloads\\winrar-x64-622br.exe");
+            //var app = Application.Launch("C:\\Users\\rafa1\\Downloads\\OperaGXSetup.exe");
 
             using (var automation = new UIA3Automation())
             {
                 var aplicativo = new FlaUIAutomation(app, automation);
-                aplicativo.InstalarOperaGX();
+                aplicativo.InstalarWinRAR();
             }
         }
     }

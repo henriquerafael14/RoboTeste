@@ -3,8 +3,10 @@ using FlaUI.Core.AutomationElements;
 using FlaUI.Core.Input;
 using FlaUI.UIA3;
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Security.Permissions;
 using System.Threading;
 
 namespace TesteAuto
@@ -24,49 +26,38 @@ namespace TesteAuto
 
         public void InstalarWinRAR()
         {
-            // Obtém a janela de confirmação de instalação do WinRAR
             var telaDeInstalacao = _app.GetMainWindow(_automation);
             if (telaDeInstalacao == null)
                 FecharAplicativo();
 
             var botaoInstalar = telaDeInstalacao.FindFirstDescendant(x => x.ByText("Instalar")).AsButton();
             if (botaoInstalar == null)
-                throw new Exception("O botão de Instalar não foi encontrado!"); 
+                throw new Exception("O botão de Instalar não foi encontrado!");
 
             Mouse.MoveTo(botaoInstalar.GetClickablePoint());
             Mouse.LeftClick();
 
-            Thread.Sleep(1000);
+            Thread.Sleep(2000);
+            Application appConfirmacao = ObterNovoProcesso("Configurações do WinRAR");
 
-            // Obtém a lista de todos os processos ativos antes do clique no botão "Instalar"
-            var processosAnteriores = Process.GetProcesses();
-
-            // Aguarda o início de um novo processo
-            Process novoProcesso = null;
-            var stopwatch = Stopwatch.StartNew();
-            while (novoProcesso == null && stopwatch.Elapsed < TimeSpan.FromSeconds(10))
-            {
-                // Obtém a lista de todos os processos atuais
-                var processosAtuais = Process.GetProcesses();
-
-                // Encontra o novo processo que não estava presente na lista anterior
-                novoProcesso = processosAtuais.FirstOrDefault(p => !processosAnteriores.Contains(p));
-
-                Thread.Sleep(500);
-            }
-
-            if (novoProcesso == null)
-                throw new Exception("O novo processo não foi iniciado.");
-
-            var telaDeConfirmacao = _app.GetAllTopLevelWindows(_automation);
-            var botaoOk = telaDeInstalacao.FindFirstDescendant(x => x.ByText("OK")).AsButton();
+            var telaDeConfirmacao = appConfirmacao.GetMainWindow(_automation);
+            var botaoOk = telaDeConfirmacao.FindFirstDescendant(x => x.ByText("OK")).AsButton();
             if (botaoOk == null)
-                throw new Exception();
+                throw new Exception("O botão de OK não foi encontrado!");
 
-            Mouse.MoveTo(botaoInstalar.GetClickablePoint());
+            Mouse.MoveTo(botaoOk.GetClickablePoint());
             Mouse.LeftClick();
 
-            Thread.Sleep(1000);
+            Thread.Sleep(2000);
+            Application appConcluido = ObterNovoProcesso("Instalação do WinRAR");
+
+            var telaConcluido = appConcluido.GetMainWindow(_automation);
+            var botaoConcluido = telaConcluido.FindFirstDescendant(x => x.ByText("Concluído")).AsButton();
+            if (botaoConcluido == null)
+                throw new Exception("O botão de OK não foi encontrado!");
+
+            Mouse.MoveTo(botaoConcluido.GetClickablePoint());
+            Mouse.LeftClick();
         }
 
         public void InstalarOperaGX()
@@ -87,16 +78,23 @@ namespace TesteAuto
             var telaDeAceite = _app.GetMainWindow(_automation);
             if (telaDeAceite == null)
                 FecharAplicativo();
-            var botaoAceitar = telaDeAceite.FindFirstDescendant(telaDeAceite => telaDeAceite.ByText("Definir em configurações")).AsButton();
+            var botaoAceitar = telaDeAceite.FindFirstDescendant(telaDeAceite => telaDeAceite.ByText("Aceitar")).AsButton();
             if (botaoAceitar == null)
                 throw new Exception("O botão de Aceitar instalação não foi encontrado!");
 
-            Mouse.MoveTo(botaoInstalar.GetClickablePoint());
+            Mouse.MoveTo(botaoAceitar.GetClickablePoint());
             Mouse.LeftClick();
+        }
 
-            Thread.Sleep(1000);
+        private static Application ObterNovoProcesso(string nomeProcesso)
+        {
+            var processos = Process.GetProcesses().ToList();
+            var novoProcesso = processos.Where(p => p.MainWindowTitle == nomeProcesso).First();
+            if (novoProcesso == null)
+                throw new Exception("Ocorreu um erro ao finalizar instalação do WinRAR!");
 
-            FecharAplicativo();
+            var app = Application.Attach(novoProcesso);
+            return app;
         }
     }
 }
