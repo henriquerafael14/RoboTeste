@@ -3,20 +3,18 @@ using FlaUI.Core.AutomationElements;
 using FlaUI.Core.Input;
 using FlaUI.UIA3;
 using System;
-using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
-using System.Security.Permissions;
 using System.Threading;
 
 namespace TesteAuto
 {
-    public class FlaUIAutomation
+    public class RoboInstalacaoService
     {
         private Application _app;
         private UIA3Automation _automation;
 
-        public FlaUIAutomation(Application app, UIA3Automation automation)
+        public RoboInstalacaoService(Application app, UIA3Automation automation)
         {
             _app = app;
             _automation = automation;

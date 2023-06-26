@@ -80,3 +80,5 @@ C:\Users\rafa1\OneDrive\Documentos\RoboTeste\TesteAuto\obj\Debug\netcoreapp3.1\T
 C:\Users\rafa1\OneDrive\Documentos\RoboTeste\TesteAuto\obj\Debug\netcoreapp3.1\TesteAuto.dll
 C:\Users\rafa1\OneDrive\Documentos\RoboTeste\TesteAuto\obj\Debug\netcoreapp3.1\TesteAuto.pdb
 C:\Users\rafa1\OneDrive\Documentos\RoboTeste\TesteAuto\obj\Debug\netcoreapp3.1\TesteAuto.genruntimeconfig.cache
+C:\Users\rafa1\OneDrive\Documentos\RoboTeste\TesteAuto\bin\Debug\netcoreapp3.1\RabbitMQ.Client.dll
+C:\Users\rafa1\OneDrive\Documentos\RoboTeste\TesteAuto\bin\Debug\netcoreapp3.1\System.Threading.Channels.dll

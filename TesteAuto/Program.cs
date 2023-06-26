@@ -1,21 +1,21 @@
-﻿using FlaUI.Core;
-using FlaUI.UIA3;
+﻿using System;
 
 namespace TesteAuto
 {
-    internal class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main()
         {
-            var app = Application.Launch("C:\\Users\\rafa1\\Downloads\\winrar-x64-622br.exe");
-            //var app = Application.Launch("C:\\Users\\rafa1\\Downloads\\OperaGXSetup.exe");
+            Robo robo = new Robo();
+            robo.Start();
 
-            using (var automation = new UIA3Automation())
-            {
-                var aplicativo = new FlaUIAutomation(app, automation);
-                aplicativo.InstalarWinRAR();
-            }
+            Console.WriteLine("Robô iniciado. Aguardando mensagens...");
+
+            // Aguardar alguma ação para encerrar o programa, por exemplo:
+            Console.ReadLine();
+
+            robo.Stop();
+            Console.WriteLine("Robô encerrado.");
         }
     }
 }
-

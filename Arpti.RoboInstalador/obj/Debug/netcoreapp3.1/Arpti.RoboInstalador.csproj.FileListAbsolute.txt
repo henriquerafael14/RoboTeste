@@ -1,0 +1,16 @@
+C:\Users\rafa1\OneDrive\Documentos\RoboTeste\Arpti.RoboInstalador\bin\Debug\netcoreapp3.1\Arpti.RoboInstalador.exe
+C:\Users\rafa1\OneDrive\Documentos\RoboTeste\Arpti.RoboInstalador\bin\Debug\netcoreapp3.1\Arpti.RoboInstalador.deps.json
+C:\Users\rafa1\OneDrive\Documentos\RoboTeste\Arpti.RoboInstalador\bin\Debug\netcoreapp3.1\Arpti.RoboInstalador.runtimeconfig.json
+C:\Users\rafa1\OneDrive\Documentos\RoboTeste\Arpti.RoboInstalador\bin\Debug\netcoreapp3.1\Arpti.RoboInstalador.runtimeconfig.dev.json
+C:\Users\rafa1\OneDrive\Documentos\RoboTeste\Arpti.RoboInstalador\bin\Debug\netcoreapp3.1\Arpti.RoboInstalador.dll
+C:\Users\rafa1\OneDrive\Documentos\RoboTeste\Arpti.RoboInstalador\bin\Debug\netcoreapp3.1\Arpti.RoboInstalador.pdb
+C:\Users\rafa1\OneDrive\Documentos\RoboTeste\Arpti.RoboInstalador\obj\Debug\netcoreapp3.1\Arpti.RoboInstalador.csproj.AssemblyReference.cache
+C:\Users\rafa1\OneDrive\Documentos\RoboTeste\Arpti.RoboInstalador\obj\Debug\netcoreapp3.1\Arpti.RoboInstalador.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rafa1\OneDrive\Documentos\RoboTeste\Arpti.RoboInstalador\obj\Debug\netcoreapp3.1\Arpti.RoboInstalador.AssemblyInfoInputs.cache
+C:\Users\rafa1\OneDrive\Documentos\RoboTeste\Arpti.RoboInstalador\obj\Debug\netcoreapp3.1\Arpti.RoboInstalador.AssemblyInfo.cs
+C:\Users\rafa1\OneDrive\Documentos\RoboTeste\Arpti.RoboInstalador\obj\Debug\netcoreapp3.1\Arpti.RoboInstalador.csproj.CoreCompileInputs.cache
+C:\Users\rafa1\OneDrive\Documentos\RoboTeste\Arpti.RoboInstalador\obj\Debug\netcoreapp3.1\Arpti.RoboInstalador.dll
+C:\Users\rafa1\OneDrive\Documentos\RoboTeste\Arpti.RoboInstalador\obj\Debug\netcoreapp3.1\Arpti.RoboInstalador.pdb
+C:\Users\rafa1\OneDrive\Documentos\RoboTeste\Arpti.RoboInstalador\obj\Debug\netcoreapp3.1\Arpti.RoboInstalador.genruntimeconfig.cache
+C:\Users\rafa1\OneDrive\Documentos\RoboTeste\Arpti.RoboInstalador\obj\Debug\netcoreapp3.1\Arpti.RoboInstalador.Arpti.resources
+C:\Users\rafa1\OneDrive\Documentos\RoboTeste\Arpti.RoboInstalador\obj\Debug\netcoreapp3.1\Arpti.RoboInstalador.csproj.GenerateResource.cache
