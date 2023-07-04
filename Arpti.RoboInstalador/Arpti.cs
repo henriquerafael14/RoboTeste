@@ -8,72 +8,68 @@ using System.Windows.Forms;
 
 namespace Arpti.RoboInstalador
 {
-    public partial class Arpti : Form
-    {
-        public Arpti()
-        {
-            InitializeComponent();
-        }
+	public partial class Arpti : Form
+	{
+		private Robo robo;
 
-        private void Arpti_Load(object sender, EventArgs e)
-        {
-            notifyIcon1.BalloonTipTitle = "ARPTI";
-            notifyIcon1.BalloonTipText = "texto de notificação";
-            notifyIcon1.Text = "ARPTI OK";
-        }
+		public Arpti()
+		{
+			InitializeComponent();
+		}
 
-        private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-            this.Show();
-            notifyIcon1.Visible = false;
-            WindowState = FormWindowState.Normal;
-        }
+		private void Arpti_Load(object sender, EventArgs e)
+		{
+			notifyIcon1.BalloonTipTitle = "ARPTI";
+			notifyIcon1.BalloonTipText = "A janela foi minimizada. Procure pelo ícone oculto na área de notificação da barra de tarefas.";
+			notifyIcon1.Text = "ARPTI OK";
+		}
 
-        private void Arpti_Resize(object sender, EventArgs e)
-        {
-            if (WindowState == FormWindowState.Minimized)
-            {
-                this.Hide();
-                notifyIcon1.Visible = true;
-                notifyIcon1.ShowBalloonTip(1000);
-            }
-            else if (FormWindowState.Normal == this.WindowState)
-            {
-                notifyIcon1.Visible = false;
-            }
-        }
+		private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
+		{
+			this.Show();
+			notifyIcon1.Visible = false;
+			WindowState = FormWindowState.Normal;
+		}
 
-        private void abrirToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Show();
-            notifyIcon1.Visible = false;
-            WindowState = FormWindowState.Normal;
-        }
+		private void Arpti_Resize(object sender, EventArgs e)
+		{
+			if (WindowState == FormWindowState.Minimized)
+			{
+				this.Hide();
+				notifyIcon1.Visible = true;
+				notifyIcon1.ShowBalloonTip(1000);
+			}
+			else if (FormWindowState.Normal == this.WindowState)
+			{
+				notifyIcon1.Visible = false;
+			}
+		}
 
-        private void iniciarToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Robo robo = new Robo();
-            robo.Start();
+		private void abrirToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			this.Show();
+			notifyIcon1.Visible = false;
+			WindowState = FormWindowState.Normal;
+		}
 
-            Console.WriteLine("Robô iniciado. Aguardando mensagens...");
+		private void fecharToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			Application.Exit();
+		}
 
-            // Aguardar alguma ação para encerrar o programa, por exemplo:
-            Console.ReadLine();
+		private void button1_Click(object sender, EventArgs e)
+		{
+			robo = new Robo();
+			robo.Start();
+		}
 
-            robo.Stop();
-            Console.WriteLine("Robô encerrado.");
-        }
-
-        private void pararToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Show();
-            notifyIcon1.Visible = false;
-            WindowState = FormWindowState.Normal;
-        }
-
-        private void fecharToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-    }
+		private void button2_Click(object sender, EventArgs e)
+		{
+			if (robo != null)
+			{
+				robo.Stop();
+				robo = null;
+			}
+		}
+	}
 }

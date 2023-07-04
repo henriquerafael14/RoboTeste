@@ -952,19 +952,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\rafa1\\.nuget\\packages\\": {}
+    "C:\\Users\\Rafael\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\rafa1\\OneDrive\\Documentos\\RoboTeste\\TesteAuto\\TesteAuto.csproj",
+      "projectUniqueName": "C:\\Users\\Rafael\\Documents\\ASPTI\\RoboTeste\\TesteAuto\\TesteAuto.csproj",
       "projectName": "TesteAuto",
-      "projectPath": "C:\\Users\\rafa1\\OneDrive\\Documentos\\RoboTeste\\TesteAuto\\TesteAuto.csproj",
-      "packagesPath": "C:\\Users\\rafa1\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\rafa1\\OneDrive\\Documentos\\RoboTeste\\TesteAuto\\obj\\",
+      "projectPath": "C:\\Users\\Rafael\\Documents\\ASPTI\\RoboTeste\\TesteAuto\\TesteAuto.csproj",
+      "packagesPath": "C:\\Users\\Rafael\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Rafael\\Documents\\ASPTI\\RoboTeste\\TesteAuto\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\rafa1\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Rafael\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

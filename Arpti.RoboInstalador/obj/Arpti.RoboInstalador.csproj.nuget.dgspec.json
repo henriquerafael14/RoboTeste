@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\rafa1\\OneDrive\\Documentos\\RoboTeste\\Arpti.RoboInstalador\\Arpti.RoboInstalador.csproj": {}
+    "C:\\Users\\Rafael\\Documents\\ASPTI\\RoboTeste\\Arpti.RoboInstalador\\Arpti.RoboInstalador.csproj": {}
   },
   "projects": {
-    "C:\\Users\\rafa1\\OneDrive\\Documentos\\RoboTeste\\Arpti.RoboInstalador\\Arpti.RoboInstalador.csproj": {
+    "C:\\Users\\Rafael\\Documents\\ASPTI\\RoboTeste\\Arpti.RoboInstalador\\Arpti.RoboInstalador.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\rafa1\\OneDrive\\Documentos\\RoboTeste\\Arpti.RoboInstalador\\Arpti.RoboInstalador.csproj",
+        "projectUniqueName": "C:\\Users\\Rafael\\Documents\\ASPTI\\RoboTeste\\Arpti.RoboInstalador\\Arpti.RoboInstalador.csproj",
         "projectName": "Arpti.RoboInstalador",
-        "projectPath": "C:\\Users\\rafa1\\OneDrive\\Documentos\\RoboTeste\\Arpti.RoboInstalador\\Arpti.RoboInstalador.csproj",
-        "packagesPath": "C:\\Users\\rafa1\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\rafa1\\OneDrive\\Documentos\\RoboTeste\\Arpti.RoboInstalador\\obj\\",
+        "projectPath": "C:\\Users\\Rafael\\Documents\\ASPTI\\RoboTeste\\Arpti.RoboInstalador\\Arpti.RoboInstalador.csproj",
+        "packagesPath": "C:\\Users\\Rafael\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Rafael\\Documents\\ASPTI\\RoboTeste\\Arpti.RoboInstalador\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\rafa1\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Rafael\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

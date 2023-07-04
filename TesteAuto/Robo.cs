@@ -22,7 +22,7 @@ namespace TesteAuto
         {
             if (message == "WinRAR")
             {
-                var app = Application.Launch("C:\\Users\\rafa1\\Downloads\\winrar-x64-622br.exe");
+                var app = Application.Launch("C:\\Users\\Rafael\\Downloads\\winrar-x64-622br.exe");
 
                 using (var automation = new UIA3Automation())
                 {
