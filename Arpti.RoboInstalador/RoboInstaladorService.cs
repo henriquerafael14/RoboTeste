@@ -142,7 +142,7 @@ namespace Arpti.RoboInstalador
 			Mouse.MoveTo(botaoComponentes.GetClickablePoint());
 			Mouse.LeftClick();
 
-			Thread.Sleep(2000);
+			Thread.Sleep(10000);
 			var telaDeConclusao = _app.GetMainWindow(_automation);
 			if (telaDeConclusao == null)
 				FecharAplicativo();

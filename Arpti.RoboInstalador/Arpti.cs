@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
 
 namespace Arpti.RoboInstalador
@@ -61,6 +56,7 @@ namespace Arpti.RoboInstalador
 		{
 			robo = new Robo();
 			robo.Start();
+			button1.Enabled = false;
 		}
 
 		private void button2_Click(object sender, EventArgs e)
@@ -69,6 +65,7 @@ namespace Arpti.RoboInstalador
 			{
 				robo.Stop();
 				robo = null;
+				button1.Enabled = true;
 			}
 		}
 	}
